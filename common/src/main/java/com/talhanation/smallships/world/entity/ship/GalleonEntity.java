@@ -33,15 +33,15 @@ public class GalleonEntity extends ContainerShip implements Bannerable, Sailable
     private static final int ORIGINAL_CONTAINER_SIZE = SmallShipsConfig.Server.shipContainerGalleonContainerSize.get();
 
     private static final List<ShipPartEntity.Definition> PARTS = List.of(
-            ShipPartEntity.Definition.hull(1.75F, -1.5F, 0.0F, 5.0F, 4.0F),//middle1
-            ShipPartEntity.Definition.hull(-1.75F, -1.5F, 0.0F, 5.0F, 4.0F),//middle2
-            ShipPartEntity.Definition.hull(0.0F, -1.5F, 0.0F, 5.0F, 4.0F),//middle2
+            ShipPartEntity.Definition.hull(1.75F, -0.5F, 0.0F, 5.0F, 3.0F),//middle1
+            ShipPartEntity.Definition.hull(-1.75F, -0.5F, 0.0F, 5.0F, 3.0F),//middle2
+            ShipPartEntity.Definition.hull(0.0F, -0.5F, 0.0F, 5.0F, 3.0F),//middle3
 
-            ShipPartEntity.Definition.hull(-4.5F, -1.5F, 1.0F, 2.5F, 4.5F),//back parts
-            ShipPartEntity.Definition.hull(-4.5F, -1.5F, -1.0F, 2.5F, 4.5F),//back parts
+            ShipPartEntity.Definition.hull(-4.5F, -0.5F, 1.0F, 2.5F, 3.5F),//back parts
+            ShipPartEntity.Definition.hull(-4.5F, -0.5F, -1.0F, 2.5F, 3.5F),//back parts
 
-            ShipPartEntity.Definition.hull(4.8F, -1.5F, 1.0F, 2.5F, 4.5F),//front parts
-            ShipPartEntity.Definition.hull(4.8F, -1.5F, -1.0F, 2.5F, 4.5F),//front parts
+            ShipPartEntity.Definition.hull(4.8F, -0.5F, 1.0F, 2.5F, 3.5F),//front parts
+            ShipPartEntity.Definition.hull(4.8F, -0.5F, -1.0F, 2.5F, 3.5F),//front parts
 
             ShipPartEntity.Definition.hull(6.5F, 0.0F, 0.0F, 1.0F, 3.0F),//front small
 
