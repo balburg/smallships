@@ -44,13 +44,31 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: smallships-fabric
-          path: fabric/build/libs/*.jar
+          path: fabric/build/libs/smallships*-fabric-*.jar
+          if-no-files-found: error
 
       - name: Upload forge jar
         uses: actions/upload-artifact@v4
         with:
           name: smallships-forge
-          path: forge/build/libs/*.jar
+          path: forge/build/libs/smallships*-forge-*.jar
+          if-no-files-found: error
+
+      - name: Upload fabric sources
+        uses: actions/upload-artifact@v4
+        with:
+          name: smallships-fabric-sources
+          path: fabric/build/libs/*-sources.jar
+          if-no-files-found: error
+        if: always()
+
+      - name: Upload forge sources
+        uses: actions/upload-artifact@v4
+        with:
+          name: smallships-forge-sources
+          path: forge/build/libs/*-sources.jar
+          if-no-files-found: error
+        if: always()
 
   publish:
     if: |
