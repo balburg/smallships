@@ -1,12 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "pattern": [
-    "###",
-    "#G#",
-    "###"
+    "nnn",
+    "nGn",
+    "nnn"
   ],
   "key": {
-    "#": {
+    "n": {
       "item": "minecraft:iron_nugget"
     },
     "G": {
@@ -14,9 +15,7 @@
     }
   },
   "result": {
-    "id": "smallships:cannon_ball",
-    "count": 2
+    "item": "smallships:grape_shot",
+    "count": 3
   }
 }
-
-

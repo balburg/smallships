@@ -16,7 +16,7 @@
     "#": { "item": "minecraft:crafting_table" }
   },
   "result": {
-    "id": "smallships:dockyard",
+    "item": "smallships:dockyard",
     "count": 1
   }
 }
