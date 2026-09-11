@@ -3,20 +3,20 @@
   "category": "equipment",
   "group": "smallships_upgrade",
   "pattern": [
-    "I I",
-    " B ",
-    "I I"
+    " I ",
+    "IBI",
+    " I "
   ],
   "key": {
     "I": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:copper_ingot"
     },
     "B": {
-      "item": "minecraft:iron_block"
+      "item": "minecraft:copper_block"
     }
   },
   "result": {
-    "id": "smallships:iron_scantlings",
+    "item": "smallships:copper_plating",
     "count": 1
   }
 }

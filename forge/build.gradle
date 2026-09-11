@@ -58,7 +58,7 @@ remapJar {
     inputFile.set shadowJar.archiveFile
     dependsOn shadowJar
     archiveBaseName.set("${rootProject.archives_base_name}-${project.name}-${rootProject.minecraft_version}")
-    archiveClassifier.set((String) null)
+    archiveClassifier.set(null)
 }
 
 jar {
