@@ -41,6 +41,17 @@ jobs:
           name: smallships-forge
           path: forge/build/libs/*.jar
 
+      - name: Upload publish inputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: smallships-publish-inputs
+          path: |
+            .gradle
+            common/build
+            fabric/build
+            forge/build
+          include-hidden-files: true
+
   publish:
     if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v'))
     needs: build
@@ -61,6 +72,12 @@ jobs:
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
+
+      - name: Download publish inputs
+        uses: actions/download-artifact@v4
+        with:
+          name: smallships-publish-inputs
+          path: .
 
       - name: Publish package to GitHub Packages
         run: ./gradlew publish --no-daemon
